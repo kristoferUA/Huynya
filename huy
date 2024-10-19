@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Skin Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .catalog {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .skin {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .skin img {
+            width: 100px;
+            height: 100px;
+        }
+        .skin h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .skin button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .skin button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Minecraft Skin Shop</h1>
+    </div>
+
+    <div class="container">
+        <div class="catalog">
+            <div class="skin">
+                <img src="skin1.png" alt="Skin 1">
+                <h3>Skin 1</h3>
+                <button>Add to Cart</button>
+            </div>
+            <div class="skin">
+                <img src="skin2.png" alt="Skin 2">
+                <h3>Skin 2</h3>
+                <button>Add to Cart</button>
+            </div>
+            <div class="skin">
+                <img src="skin3.png" alt="Skin 3">
+                <h3>Skin 3</h3>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Додай більше скинів тут -->
+        </div>
+    </div>
+
+    <script>
+        // Обробка додавання в кошик
+        const buttons = document.querySelectorAll('.skin button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Skin added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>
